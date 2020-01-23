@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ListActivity">
+
+    <TextView
+
+        android:id="@+id/tvSweet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:lineSpacingExtra="12dp"
+        android:text="WELCOME TO OUR INVENTORY"
+        android:textAlignment="center"
+        android:textColor="#3E4993"
+        android:textSize="22sp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/tvSweetSub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvSweet"
+        android:layout_marginTop="7dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:lineSpacingExtra="12dp"
+        android:text="SALES MANAGEMENT SYSTEM"
+        android:textAlignment="center"
+        android:textColor="#D5D5D5"
+        android:textSize="18sp"/>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="10dp"
+        android:background="#F2F2F2"
+        android:layout_below="@id/tvSweetSub"/>
+
+
+
+    <TextView
+        android:id="@+id/tvRare"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_below="@+id/view"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:text="Choose a Product"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:textColor="#3E4993"
+        android:textSize="20sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_below="@+id/tvRare"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/colorPrimary"
+        app:itemIconTint="@android:color/white"
+        app:itemTextColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recycler_view"
+        app:layout_constraintVertical_bias="1.0"
+        app:menu="@menu/bottom_nav_menu" />
+</RelativeLayout>

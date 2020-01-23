@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor = "#fff"
+    app:contentPadding = "7dp"
+    app:cardCornerRadius = "3dp"
+    app:cardElevation = "5dp"
+    app:cardUseCompatPadding = "true">
+
+    <LinearLayout
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:orientation="vertical">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="#D5D5D5">
+
+
+    <TextView
+        android:id="@+id/utitlerv"
+        android:textSize="20sp"
+        android:textColor="@color/colorPrimary"
+        android:text="Product Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/upricerv"
+        android:layout_width="147dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="5dp"
+        android:gravity="end"
+        android:paddingRight="5dp"
+        android:text="price"
+        android:textColor="#000"
+        android:textSize="20sp" />
+</LinearLayout>
+
+
+        <TextView
+            android:id="@+id/uquantityrv"
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:text="quantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+
+        <TextView
+            android:id="@+id/utimerv"
+            android:textSize="17sp"
+            android:textColor="#000"
+            android:text="TimeStamp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor = "#fff"
+    app:contentPadding = "5dp"
+    app:cardCornerRadius = "3dp"
+    app:cardElevation = "3dp"
+    app:cardUseCompatPadding = "true">
+
+    <LinearLayout
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/namerv"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimary"
+            android:text="Admin Name"
+            android:textAlignment="center"
+            android:textFontWeight="1000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <TextView
+            android:id="@+id/mobilerv"
+            android:textSize="18sp"
+            android:textColor="#D5D5D5"
+            android:text="Mobile"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/emailrv"
+            android:textSize="16sp"
+            android:textColor="#D5D5D5"
+            android:text="Email"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/rolerv"
+            android:textSize="17sp"
+            android:textColor="#D5D5D5"
+            android:text="Role"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

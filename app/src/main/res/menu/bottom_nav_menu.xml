@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/addbtn"
+        android:enabled="true"
+        android:icon="@drawable/ic_add_black_24dp"
+        android:title="Add Item"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_sales"
+        android:enabled="true"
+        android:icon="@drawable/ic_store_sales"
+        android:title="Sales"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_admin"
+        android:enabled="true"
+        android:icon="@drawable/ic_admin_foreground"
+        android:title="Admins"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_predict"
+        android:enabled="true"
+        android:icon="@drawable/ic_support"
+        android:title="Forecast"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_nearby"
+        android:enabled="true"
+        android:icon="@drawable/ic_logout"
+        android:title="Logout"
+        app:showAsAction="ifRoom" />
+</menu>

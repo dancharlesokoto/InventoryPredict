@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".SeverActivity">
+
+    <TextView
+        android:id="@+id/item"
+        android:padding="12dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#000"
+        android:hint="Item"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:padding="12dp"
+        android:layout_marginTop="0dp"
+        android:textColor="#000"
+        android:hint="Stock Available"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/stock"
+        android:padding="12dp"
+        android:layout_marginTop="0dp"
+        android:textColor="#000"
+        android:hint="Stock"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:weightSum="100"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <TextView
+            android:padding="12dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#000"
+            android:hint="Your will need approximately"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/resultTextView"
+            android:padding="12dp"
+            android:layout_marginTop="5dp"
+            android:textColor="#000"
+            android:hint="RESULT LOADING"
+            android:textSize="18sp"
+            android:background="#F2F2F2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:padding="12dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#000"
+        android:hint=""
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

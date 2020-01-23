@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CartActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:id="@+id/lo">
+
+        <TextView
+            android:id="@+id/tvSweetSub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvSweet"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:lineSpacingExtra="12dp"
+            android:text="SALES MANAGEMENT SYSTEM"
+            android:textAlignment="center"
+            android:textColor="#D5D5D5"
+            android:textSize="18sp"/>
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:lineSpacingExtra="12dp"
+            android:text="Total Amount in Cart:"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/totalprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:lineSpacingExtra="12dp"
+                android:text="$"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/totally"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"
+                android:lineSpacingExtra="12dp"
+                android:text="0.00"
+                android:textAlignment="center"
+                android:textColor="#008b00"
+                android:textSize="18sp"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="10dp"
+        android:background="#F2F2F2"
+        android:layout_below="@id/lo"/>
+
+
+<ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/view"
+    android:id="@+id/sc">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_below="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</ScrollView>
+
+
+    <Button
+        android:id="@+id/checkout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#008b00"
+        android:text="Check Out"
+        android:textColor="#fff"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sc"
+        app:layout_constraintVertical_bias="1.0"/>
+</RelativeLayout>

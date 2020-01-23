@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_dash_foreground"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_cart"
+            android:icon="@drawable/ic_menu_cart_foreground"
+            android:title="My Cart" />
+        <item
+            android:id="@+id/nav_ordered"
+            android:icon="@drawable/ic_menu_ordered_foreground"
+            android:title="Ordered Items" />
+        <item
+            android:id="@+id/profile"
+            android:icon="@drawable/ic_menu_profile_foreground"
+            android:title="Profile" />
+        <item
+            android:id="@+id/signout"
+            android:icon="@drawable/ic_menu_signout_foreground"
+            android:title="SignOut" />
+    </group>
+
+
+</menu>
