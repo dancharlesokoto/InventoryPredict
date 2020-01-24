@@ -7,6 +7,35 @@
     android:background="#FFFFFF"
     tools:context=".SeverActivity">
 
+
+    <TextView
+
+        android:id="@+id/tvSweet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:lineSpacingExtra="12dp"
+        android:text="WELCOME TO OUR INVENTORY"
+        android:textAlignment="center"
+        android:textColor="#3E4993"
+        android:textSize="22sp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/tvSweetSub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvSweet"
+        android:layout_marginTop="7dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:lineSpacingExtra="12dp"
+        android:text="PREDICT SALES"
+        android:textAlignment="center"
+        android:textColor="#D5D5D5"
+        android:textSize="18sp"/>
+
     <TextView
         android:id="@+id/item"
         android:padding="12dp"
@@ -17,10 +46,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <TextView
+        android:id="@+id/itemdes"
         android:padding="12dp"
         android:layout_marginTop="0dp"
         android:textColor="#000"
-        android:hint="Stock Available"
+        android:hint="Description"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:padding="12dp"
+        android:layout_marginTop="0dp"
+        android:textColor="#000"
+        android:hint="Stock Remaining:"
         android:textSize="18sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
@@ -34,6 +72,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+
+    <DatePicker
+        android:id="@+id/datePicker1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true" />
 
     <LinearLayout
         android:layout_marginTop="10dp"
@@ -63,12 +108,15 @@
 
     </LinearLayout>
 
-    <TextView
+    <Button
+        android:id="@+id/btnpredict"
         android:padding="12dp"
-        android:layout_marginTop="10dp"
-        android:textColor="#000"
-        android:hint=""
-        android:textSize="18sp"
+        android:layout_marginTop="15dp"
+        android:text="PREDICT"
+        android:textColor="#fff"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:background="#3E4993"
+        />
 </LinearLayout>

@@ -46,13 +46,13 @@ public class CustomAdapterPred extends RecyclerView.Adapter<ViewHolder> {
                 String prono = modelList.get(position).getProno();
 
                 Intent intent = new Intent(predictActivity,SeverActivity.class);
-                intent.putExtra("pId", id);
-                intent.putExtra("pBar", bar);
-                intent.putExtra("pTitle", title);
-                intent.putExtra("pDes", des);
-                intent.putExtra("pPrice", pric);
-                intent.putExtra("pQuantity", quan);
-                intent.putExtra("pProno", prono);
+                intent.putExtra("zId", id);
+                intent.putExtra("zBar", bar);
+                intent.putExtra("zTitle", title);
+                intent.putExtra("zDes", des);
+                intent.putExtra("zPrice", pric);
+                intent.putExtra("zQuantity", quan);
+                intent.putExtra("zProno", prono);
 
                 predictActivity.startActivity(intent);
 
