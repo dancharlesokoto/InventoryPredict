@@ -72,13 +72,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-
-    <DatePicker
-        android:id="@+id/datePicker1"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/editText1"
+        android:padding="12dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_centerHorizontal="true" />
+        android:layout_marginTop="0dp"
+        android:ems="10"
+        android:hint="Enter Date" />
 
     <LinearLayout
         android:layout_marginTop="10dp"
