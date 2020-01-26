@@ -59,12 +59,12 @@ public class CartActivity extends AppCompatActivity {
     String country = "NG";
     String currency = "NGN";
 
-    final String publicKey = "FLWPUBK-a5350848a09d3e782833f2122bbf965f-X"; //Get your public key from your account
-    final String encryptionKey = "054a22414b23e0a8dd0e1d74"; //Get your encryption key from your account
+    final String publicKey = "FLWPUBK_TEST-41bcca534bf9bb2021a14721564c06bd-X"; //Get your public key from your account
+    final String encryptionKey = "FLWSECK_TEST327d12852d4b"; //Get your encryption key from your account
 
-    int amount = 0;
+    int amount ;
 
-    String wallet ="0";
+    String wallet;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,20 +92,19 @@ public class CartActivity extends AppCompatActivity {
         pd = new ProgressDialog(this);
 
 
-        wallet = cartprice;
-
 
         checkout = findViewById(R.id.checkout);
         checkout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                TextView price = findViewById(R.id.totally);
-                String ppt = price.getText().toString();
+               /* if (!(checkout.getText().toString().equals("CHECK OUT $0"))){
+
+                    //getuserinfo();
+                    //makePayment(amount);
+                }*/
 
 
-
-                makePayment(Integer.parseInt(ppt));
             }
         });
 
@@ -118,7 +117,7 @@ public class CartActivity extends AppCompatActivity {
 
         String id = FirebaseAuth.getInstance().getCurrentUser().getEmail();
 
-        db.collection("cart").document(id).collection(id).whereGreaterThanOrEqualTo("status","open")
+        db.collection("cart").document(id).collection(id).whereEqualTo("status","open")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
@@ -316,6 +315,8 @@ public class CartActivity extends AppCompatActivity {
                             checkout = findViewById(R.id.checkout);
                             checkout.setText("CHECK OUT $"+cartprice);
 
+                            //amount = Integer.parseInt(cartprice);
+
 
 
 
@@ -404,6 +405,40 @@ public class CartActivity extends AppCompatActivity {
                     }
                 });
 
+    }
+
+    public void deleteData(int index){
+
+        pd.setTitle("Deleting Record...");
+        pd.show();
+        String id = FirebaseAuth.getInstance().getCurrentUser().getEmail();
+
+        //db.collection("cart").document(id).collection(id).document(timestamp).set(doc)
+
+
+        db.collection("cart").document(id).collection(id).document(modelList.get(index).getId())
+                .delete()
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+
+                        pd.dismiss();
+
+                        Toast.makeText(CartActivity.this, "Deleted successfully", Toast.LENGTH_SHORT).show();
+
+                        startActivity(new Intent(CartActivity.this, CartActivity.class));
+                        finish();
+
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        pd.dismiss();
+                        Toast.makeText(CartActivity.this, "Error Deleting \n"+e.getMessage(), Toast.LENGTH_SHORT).show();
+
+                    }
+                });
     }
 
 }

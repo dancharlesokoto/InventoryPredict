@@ -109,6 +109,8 @@ public class SeverActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                resultTextView.setText("RESULT LOADING");
+
                 if (c.isEmpty() || d.isEmpty() || e.isEmpty()){
 
                     Toast.makeText(SeverActivity.this, "Date to predict is not set", Toast.LENGTH_SHORT).show();

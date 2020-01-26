@@ -87,20 +87,23 @@
         android:layout_below="@id/lo"/>
 
 
-<ScrollView
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:layout_below="@id/view"
-    android:id="@+id/sc">
+    <ScrollView
+        android:id="@+id/sc"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/checkout"
+        android:layout_below="@id/view"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="5dp">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view"
-        android:layout_below="@+id/view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view" />
 
-</ScrollView>
 
+    </ScrollView>
 
     <Button
         android:id="@+id/checkout"
@@ -115,4 +118,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sc"
         app:layout_constraintVertical_bias="1.0"/>
+
 </RelativeLayout>

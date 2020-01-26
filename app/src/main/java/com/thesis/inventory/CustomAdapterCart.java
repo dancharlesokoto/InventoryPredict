@@ -35,9 +35,26 @@ public class CustomAdapterCart extends RecyclerView.Adapter<ViewHolderCart> {
 
         viewHolder.setOnClickListener(new ViewHolderCart.ClickListener() {
             @Override
-            public void onItemClick(View view, int position) {
+            public void onItemClick(View view, final int position) {
 
-                String id = modelList.get(position).getTimestamp();
+                AlertDialog.Builder builder = new AlertDialog.Builder(cartActivity);
+
+                String[] options = {"Do you want to delete Product?", "Delete Product Record"};
+
+                builder.setItems(options, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        if(which == 1){
+
+                            cartActivity.deleteData(position);
+
+                        }
+
+                    }
+                }).create().show();
+
+               /* String id = modelList.get(position).getTimestamp();
                 String title = modelList.get(position).getTitle();
                 String des = modelList.get(position).getDescription();
                 String pric = modelList.get(position).getPrice();
@@ -52,7 +69,7 @@ public class CustomAdapterCart extends RecyclerView.Adapter<ViewHolderCart> {
                 intent.putExtra("cPrice", pric);
                 intent.putExtra("cQuantity", quan);
 
-                cartActivity.startActivity(intent);
+                cartActivity.startActivity(intent);*/
 
             }
 

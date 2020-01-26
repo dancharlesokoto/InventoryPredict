@@ -74,8 +74,8 @@
 
     <EditText
         android:id="@+id/editText1"
-        android:padding="12dp"
-        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
         android:ems="10"
@@ -100,7 +100,7 @@
             android:padding="12dp"
             android:layout_marginTop="5dp"
             android:textColor="#000"
-            android:hint="RESULT LOADING"
+            android:hint="SELECT DATE AND WAIT FOR RESULT"
             android:textSize="18sp"
             android:background="#F2F2F2"
             android:layout_width="match_parent"
