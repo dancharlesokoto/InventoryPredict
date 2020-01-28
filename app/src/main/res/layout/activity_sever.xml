@@ -91,7 +91,7 @@
             android:padding="12dp"
             android:layout_marginTop="20dp"
             android:textColor="#000"
-            android:hint="Your will need approximately"
+            android:hint="You will need approximately"
             android:textSize="18sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />

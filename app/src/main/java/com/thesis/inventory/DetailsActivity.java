@@ -179,7 +179,7 @@ public class DetailsActivity extends AppCompatActivity {
    private void upload(String uid, String title, String des, final String price, String quant, String bar, final String timestamp, String status) {
 
 
-        pd.setTitle("Adding Product to Cart");
+        pd.setTitle("Adding ....");
 
         pd.show();
 
@@ -326,21 +326,27 @@ public class DetailsActivity extends AppCompatActivity {
 
                 //Toast.makeText(DetailsActivity.this, " User Func"+cartid + " & "+cartprice, Toast.LENGTH_LONG).show();
 
+
+                Toast.makeText(this, "SUCCESS " + message, Toast.LENGTH_SHORT).show();
+
                 Date date = new Date();
 
                 Timestamp times = new Timestamp(date.getTime());
 
+                String pricer = String.valueOf(price + Float.parseFloat(cartprice));
+
+                //Toast.makeText(DetailsActivity.this, "Price "+ pricer, Toast.LENGTH_SHORT).show();
 
 
                 final String id = FirebaseAuth.getInstance().getCurrentUser().getEmail();
 
+                updateData(id,pricer,times.toString());
 
                 upload(id,titledt.getText().toString(), desdt.getText().toString(),String.valueOf(price), quandt.getText().toString().trim(),bardt.getText().toString(),times.toString(),"paid");
 
                 updateproduct(dId,quandt.getText().toString());
-                Toast.makeText(this, "SUCCESS " + message, Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(DetailsActivity.this, UsersActivity.class));
-                finish();
+
+
             } else if (resultCode == RavePayActivity.RESULT_ERROR) {
                 Toast.makeText(this, "ERROR " + message, Toast.LENGTH_SHORT).show();
             } else if (resultCode == RavePayActivity.RESULT_CANCELLED) {

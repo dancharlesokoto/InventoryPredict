@@ -104,6 +104,8 @@ public class UsersActivity extends AppCompatActivity {
 
 
                     case R.id.nav_ordered:
+                        startActivity(new Intent(UsersActivity.this, OrderedActivity.class));
+
                         Toast.makeText(UsersActivity.this, "Ordered Items",Toast.LENGTH_SHORT).show();break;
 
                     case R.id.nav_cart:

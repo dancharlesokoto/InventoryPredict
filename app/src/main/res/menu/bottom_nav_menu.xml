@@ -12,6 +12,7 @@
         android:enabled="true"
         android:icon="@drawable/ic_store_sales"
         android:title="Sales"
+        android:visible="false"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/action_admin"

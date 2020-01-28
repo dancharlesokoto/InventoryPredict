@@ -15,7 +15,7 @@
         <item
             android:id="@+id/nav_ordered"
             android:icon="@drawable/ic_menu_ordered_foreground"
-            android:title="Ordered Items" />
+            android:title="Ordered Items"/>
         <item
             android:id="@+id/profile"
             android:icon="@drawable/ic_menu_profile_foreground"
